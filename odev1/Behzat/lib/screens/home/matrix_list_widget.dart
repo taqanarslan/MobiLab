@@ -50,8 +50,7 @@ class _ListWidgetState extends State<ListWidget> {
         SliverToBoxAdapter(
           child: Container(
             margin: MarginConst.sliverHor,
-            width: SizeConst.colorBoxWidth,
-            height: SizeConst.colorBoxWidth,
+            height: SizeConst.colorBoxHeight,
             alignment: Alignment.center,
             decoration: BoxDecoration(
               color: boxColor,
