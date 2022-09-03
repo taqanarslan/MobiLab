@@ -4,6 +4,7 @@ import '../../utils/constants/padding_const.dart';
 import '../../utils/constants/radius_const.dart';
 import '../../utils/constants/size_const.dart';
 import '../../utils/services/color_catalog.dart';
+import '../../widgets/boxes/box_widget.dart';
 import '../../widgets/colors/color_box.dart';
 
 class ListWidget extends StatefulWidget {
@@ -47,6 +48,7 @@ class _ListWidgetState extends State<ListWidget> {
             ),
           ),
         ),
+        CustomWidget.sizedBox30,
         SliverToBoxAdapter(
           child: Container(
             margin: MarginConst.sliverHor,

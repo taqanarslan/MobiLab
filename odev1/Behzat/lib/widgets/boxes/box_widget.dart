@@ -1,3 +1,5 @@
 import 'package:flutter/material.dart';
 
-Widget getSizedBox30() => const SizedBox(height: 30);
+class CustomWidget {
+  static Widget get sizedBox30 => const SizedBox(height: 30);
+}
