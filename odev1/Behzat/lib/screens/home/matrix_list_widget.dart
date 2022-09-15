@@ -48,7 +48,7 @@ class _ListWidgetState extends State<ListWidget> {
             ),
           ),
         ),
-        CustomWidget.sizedBox30,
+        SliverToBoxAdapter(child: CustomWidget.sizedBox30),
         SliverToBoxAdapter(
           child: Container(
             margin: MarginConst.sliverHor,
