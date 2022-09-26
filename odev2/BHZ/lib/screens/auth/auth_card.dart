@@ -55,14 +55,14 @@ class _AuthCardState extends State<AuthCard> {
                   ),
                   CustomWidget.sizedBox60,
                   AuthFormField(
-                    controller: _auth.emailController,
-                    focusNode: _auth.emailFocus,
-                    hintText: TextConst.email,
+                    controller: _auth.name,
+                    focusNode: _auth.nameFocus,
+                    hintText: TextConst.name,
                     obscureText: false,
-                    isEnabled:true,
+                    isEnabled: true,
                     keyboardType: TextInputType.emailAddress,
                     onSubmitted: (String? val) {
-                      _auth.emailFocus.unfocus();
+                      _auth.nameFocus.unfocus();
                       FocusScope.of(context).requestFocus(_auth.passwordFocus);
                     },
                   ),
@@ -75,20 +75,14 @@ class _AuthCardState extends State<AuthCard> {
                     keyboardType: TextInputType.text,
                     onSubmitted: (String? val) {
                       _auth.passwordFocus.unfocus();
-                      _auth.submit(
-                          email: _auth.emailController.text.trim(),
-                          password: _auth.passwordController.text.trim(),
-                          context: context);
+                      _auth.submit(context: context);
                     },
                   ),
                   CustomWidget.sizedBox30,
                   KTextButton(
                     text: TextConst.signIn,
                     onTap: () {
-                      _auth.submit(
-                          email: _auth.emailController.text.trim(),
-                          password: _auth.passwordController.text.trim(),
-                          context: context);
+                      _auth.submit(context: context);
                     },
                   )
                 ],

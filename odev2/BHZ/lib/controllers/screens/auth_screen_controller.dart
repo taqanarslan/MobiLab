@@ -8,67 +8,65 @@ enum AuthMode { signup, login }
 class AuthScreenController {
   AuthScreenController();
 
-  late final TextEditingController _emailController;
+  late final TextEditingController _nameController;
   late final TextEditingController _passwordController;
 
   ///
-  late final FocusNode _emailFocus;
+  late final FocusNode _nameFocus;
   late final FocusNode _passwordFocus;
 
   ///
-  TextEditingController get emailController => _emailController;
+  TextEditingController get name => _nameController;
 
   TextEditingController get passwordController => _passwordController;
 
   ///
-  FocusNode get emailFocus => _emailFocus;
+  FocusNode get nameFocus => _nameFocus;
 
   FocusNode get passwordFocus => _passwordFocus;
 
   void initControllers() {
     /// init controllers
-    _emailController = TextEditingController();
+    _nameController = TextEditingController();
     _passwordController = TextEditingController();
-    _emailFocus = FocusNode();
+    _nameFocus = FocusNode();
     _passwordFocus = FocusNode();
   }
 
   void disposeControllers() {
     /// dispose controllers
-    _emailController.dispose();
+    _nameController.dispose();
     _passwordController.dispose();
 
     ///
-    _emailFocus.dispose();
+    _nameFocus.dispose();
     _passwordFocus.dispose();
   }
 
   void clearAll() {
-    _emailController.clear();
+    _nameController.clear();
     _passwordController.clear();
   }
 
   void unfocusAll() {
-    _emailFocus.unfocus();
+    _nameFocus.unfocus();
     _passwordFocus.unfocus();
   }
 
   void submit({
-    required String email,
-    required String password,
     required BuildContext context,
   }) {
-    final AuthUser user = AuthDB.users
-        .firstWhere((element) => element.email == email, orElse: () {
+    final AuthUser user = AuthDB.users.firstWhere(
+        (element) => element.name == _nameController.text.trim(), orElse: () {
       return const AuthUser(password: '', email: '', name: '');
     });
-    if (user.email == '') {
+    if (user.name == '') {
       /// Didn't find a user
       ScaffoldMessenger.of(context)
           .showSnackBar(const SnackBar(content: Text("User not found")));
       return;
     }
-    if (user.password == password) {
+    if (user.password == _passwordController.text.trim()) {
       /// push to Home screen if password matches user;
       Navigator.of(context)
           .pushReplacementNamed('/home', arguments: {'user': user});
