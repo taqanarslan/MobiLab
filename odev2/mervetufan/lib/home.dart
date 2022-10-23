@@ -74,3 +74,9 @@ class _HomePageState extends State<HomePage> {
 }
 
 
+// class TextFieldValidator {
+//   String? validatevalue(String? data ) {
+//     return (data?.isNotEmpty ?? false) ? null : 'hata';
+
+//   }
+// }
