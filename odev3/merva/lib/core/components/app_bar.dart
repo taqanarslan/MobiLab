@@ -24,10 +24,10 @@ class _MyAppBarState extends State<MyAppBar> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     _controller = widget.controller;
-    
   }
 
   late TabController _controller;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -82,10 +82,12 @@ class _MyAppBarState extends State<MyAppBar> with TickerProviderStateMixin {
             ),
           ),
           Expanded(
-            child: Container(width: double.infinity,
+            child: Container(
+              width: double.infinity,
+              alignment: Alignment.bottomCenter,
               child: TabBar(
                   indicatorColor: Colors.transparent,
-                  padding: EdgeInsets.only(bottom: 20, top: 20),
+                  // padding: EdgeInsets.only(bottom: 20, top: 20),
                   controller: _controller,
                   tabs: [
                     Icon(
@@ -102,7 +104,6 @@ class _MyAppBarState extends State<MyAppBar> with TickerProviderStateMixin {
                     ),
                   ]),
             ),
-            
           ),
         ],
       ),
