@@ -12,18 +12,14 @@ class ExploreScreen extends StatefulWidget {
 }
 
 class _ExploreScreenState extends State<ExploreScreen> {
-  // late TabController _tabController;
 
   @override
   void initState() {
-    // _tabController = TabController(length: 10, vsync: this);
-    // _tabController.animateTo(2);
     super.initState();
   }
 
   @override
   void dispose() {
-    // _tabController.dispose();
     super.dispose();
   }
 
