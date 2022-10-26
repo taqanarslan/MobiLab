@@ -49,7 +49,6 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     Container(),
                     Container(),
                     Container(),
-                    Container(),
                   ],
                 ),
               ),
@@ -60,8 +59,3 @@ class _ExploreScreenState extends State<ExploreScreen> {
     );
   }
 }
-
-
-
-
-

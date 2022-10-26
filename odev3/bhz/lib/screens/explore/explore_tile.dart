@@ -1,9 +1,12 @@
-
 import 'package:flutter/material.dart';
 
 import '../../models/explore_model.dart';
+import '../../utils/constants/box_const.dart';
 import '../../utils/constants/padding_const.dart';
 import '../../utils/constants/radius_const.dart';
+import '../../utils/constants/size_const.dart';
+import '../../utils/constants/text_const.dart';
+import '../../utils/constants/colors_const.dart';
 
 class ExploreTile extends StatelessWidget {
   const ExploreTile({
@@ -39,7 +42,7 @@ class ExploreTile extends StatelessWidget {
                       top: 10,
                       child: IconButton(
                         icon: const Icon(Icons.favorite_outline,
-                            color: Colors.white, size: 30),
+                            color: Colors.white, size: SizeConst.favouriteIcon),
                         onPressed: () {},
                       ))
                 ])),
@@ -49,47 +52,46 @@ class ExploreTile extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 15),
+                const SizedBox(height: SizeConst.starIcon),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                     Text(
+                    Text(
                       model.points,
                       style: const TextStyle(fontWeight: FontWeight.w500),
                     ),
                     Row(
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.star,
-                          color: Colors.grey[800]!,
-                          size: 18,
+                          color: ColorConst.grey1,
+                          size: SizeConst.starIcon,
                         ),
-                         Text(
+                        Text(
                           model.price,
-                          style: TextStyle(color: Colors.grey),
+                          style: const TextStyle(color: Colors.grey),
                         )
                       ],
                     )
                   ],
                 ),
-                const SizedBox(height: 5),
+                SizedBoxConst.height5,
                 Text(
-                  '${model.kmAway} kilometers away',
-                  style: TextStyle(color: Colors.grey[600]),
+                  '${model.kmAway} ${TextConst.kmAway}',
+                  style: const TextStyle(color: ColorConst.grey1),
                 ),
                 Text(
                   model.date,
-                  style: TextStyle(color: Colors.grey[600]),
+                  style: const TextStyle(color: ColorConst.grey1),
                 ),
-                const SizedBox(height: 5),
+                SizedBoxConst.height5,
                 Row(
                   children: [
-                     Text('\$${model.price}',
+                    Text('\$${model.price}',
                         style: const TextStyle(fontWeight: FontWeight.w500)),
-                    Text(' night',
+                    const Text(' ${TextConst.night}',
                         style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            color: Colors.grey[700])),
+                            fontWeight: FontWeight.w400, color: Colors.grey)),
                   ],
                 ),
               ],

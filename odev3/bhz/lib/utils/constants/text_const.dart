@@ -18,5 +18,7 @@ class TextConst {
   static const String trips = 'Trips';
   static const String inbox = 'Inbox';
   static const String profile = 'Profile';
+  static const String night = ' night';
+  static const String kmAway = ' kilometers away';
 
 }

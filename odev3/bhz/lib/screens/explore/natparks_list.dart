@@ -10,7 +10,7 @@ class NatParksList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemBuilder: (ctx, i) => ExploreTile(model: ExploreFakeDB.list[i]),
+      itemBuilder: (ctx, i) => ExploreTile(model: ExploreFakeDB.list1[i]),
       itemCount: ExploreFakeDB.list.length,
       padding: PaddingConst.vertical16,
     );
