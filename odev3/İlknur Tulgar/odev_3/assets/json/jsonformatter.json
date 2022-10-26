@@ -1,0 +1,41 @@
+[
+  {
+    
+    "price":4.53,
+    "mapText": "1.909 kilometre uzakta",
+    "mainText": "1.280 ",
+    "dayText": "gece",
+    "dateText": "6-11 Kas",
+    "id": 1,
+    "title": "Requista, Fransa",
+    "url1": "https://www.neredekal.com/res/blog/4_bogazkale_goleti.jpg",
+    "url2": "https://www.kayak.com.tr/rimg/dimg/ab/ac/1bce874d-city-3472-163dafcee57.jpg?crop=true&width=400&height=300",
+    "url3": "https://storage.kucukoteller.com.tr/2020/03/23/1584957437637187.jpg"
+  },
+  {
+    
+    "price": 3.2,
+    "mainText": "1.280  ",
+    "mapText": "1.202 kilometre uzakta",
+    "dayText": "gece",
+    "dateText": "5-7 Kas ",
+    "id": 2,
+    "title": "Riva,İtalya",
+    "url1": "https://media-cdn.tripadvisor.com/media/photo-s/24/08/5a/8a/lido-esterno.jpg",
+    "url2": "https://media-cdn.tripadvisor.com/media/photo-s/12/cd/97/15/sala-colazioni-vista.jpg",
+    "url3": "https://media-cdn.tripadvisor.com/media/photo-s/02/72/76/1e/excelsior-riva-del-garda.jpg"
+  },
+  {
+   
+    "id": 3,
+    "price": 3.2,
+    "mainText": "1.280  ",
+    "mapText": "1.202 kilometre uzakta",
+    "dayText": "gece",
+    "dateText": "5-7 Kas ",
+    "title": "Torno,İtalya",
+    "url1": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/ef/cd/6e/tornoalago.jpg?w=700&h=-1&s=1",
+    "url2": "https://a0.muscache.com/im/pictures/miso/Hosting-592017358759818049/original/e15c1087-ae93-4a8b-b4fc-87e9af823515.jpeg?im_w=720",    
+    "url3": "https://gezenticift.com/wp-content/uploads/2019/07/stresa-gezi-rehberi-2.jpg"
+  }
+]
