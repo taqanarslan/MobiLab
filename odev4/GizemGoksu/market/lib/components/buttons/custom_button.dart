@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:market/classes/button_class.dart';
+import 'package:market/models/button_class.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key, required this.button});

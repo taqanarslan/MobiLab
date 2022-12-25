@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:market/components/custom_button.dart';
-import 'package:market/classes/product_class.dart';
-import 'package:market/components/increasing_decreasing_row.dart';
-import '../classes/button_class.dart';
-import '../controllers/controller.dart';
+import 'package:market/components/buttons/custom_button.dart';
+import 'package:market/models/product_class.dart';
+import 'package:market/components/buttons/my_toggle_buttons.dart';
+import '../../models/button_class.dart';
+import '../../controllers/controller.dart';
 import 'package:market/core/base/util/base_utility.dart';
 class ProductInformationRowInMP extends StatelessWidget { //ana sayfadaki ürün bilgi satırı
   ProductInformationRowInMP({super.key, required this.product});
@@ -15,7 +15,7 @@ class ProductInformationRowInMP extends StatelessWidget { //ana sayfadaki ürün
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(5),
-      child: bigInformationBox(informationRow(customImage(product.assetName),informationColumn())),
+      child: bigInformationBox(informationRow(customImage(product.assetName,110,150),informationColumn())),
     );
   }
 
@@ -24,8 +24,8 @@ class ProductInformationRowInMP extends StatelessWidget { //ana sayfadaki ürün
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text(product.name,style: const TextStyle(fontSize: 12),),
-                Text('Birim Fiyatı: ${product.price.toString()} TL',style: const TextStyle(fontSize: 12),),
+                myTextWidget(product.name, ColorUtility.black, 12),
+                myTextWidget('Birim Fiyatı: ${product.price.toString()} TL',ColorUtility.black,12),
                 IncreasingDecreasingRow(product: product),
                 CustomButton(button: buttonAddToSC)
               ],

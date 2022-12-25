@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:market/classes/product_class.dart';
+import 'package:market/models/product_class.dart';
 import 'package:market/controllers/controller.dart';
 import 'package:get/get.dart';
 import 'package:market/core/base/util/base_utility.dart';
 
-class IncreasingDecreasingRow extends StatelessWidget {
-  IncreasingDecreasingRow({super.key,required this.product});
+class IncreasingDecreasingRow extends StatelessWidget { //ToggleButtons widget'ı tıklanılan butonu çalıştırıp yanındaki diğer butonların çalışmamasını sağlıyor
+  IncreasingDecreasingRow({super.key,required this.product}); //butonlar indexlerine göre çalışıyor
   Product product;
   @override
   Widget build(BuildContext context) {

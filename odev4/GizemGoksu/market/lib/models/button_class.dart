@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:market/classes/box_class.dart';
+import 'package:market/models/box_class.dart';
 class Button {
   Box box;
   Function() function;

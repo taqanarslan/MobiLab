@@ -3,12 +3,12 @@ import 'package:get/get.dart';
 import 'package:market/controllers/controller.dart';
 import 'package:market/core/base/util/base_utility.dart';
 
-
 class MyAppBar extends StatelessWidget {
   MyAppBar({super.key, required this.whereItIs, required this.otherPage});
   final String whereItIs;
   final String otherPage;
   Controller controller = Get.find();
+
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -25,9 +25,8 @@ class MyAppBar extends StatelessWidget {
         icon: IconUtiliity.arrowBack,
       ),
       actions: [
-        IconButton(
-            icon: IconUtiliity.shoppinCartIcon,
-            onPressed: (() => controller.passingToShoppingCart())),
+        IconButton(icon: IconUtiliity.shoppingCartIcon,onPressed: (() => controller.passingToShoppingCart())),
+        IconButton(icon: IconUtiliity.logoutIcon,onPressed: (() => controller.logoutFunction()),)
       ],
     );
   }

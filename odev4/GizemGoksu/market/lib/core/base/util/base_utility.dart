@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:market/classes/box_class.dart';
+import 'package:get/get.dart';
+import 'package:market/models/box_class.dart';
+import 'package:market/components/textfield/customtextfield.dart';
 
 class BoxUtility {
   static Box addToSCBox = Box(
@@ -24,6 +26,14 @@ class BoxUtility {
     borderColor: ColorUtility.orangeOnBorder,
     borderWidth: AppComponentSizes.completeShoppingBoxBorderWidth,
     borderRadius: AppComponentSizes.completeShoppingBoxBorderRadius,
+  );
+  static Box loginBox = Box(
+      height: 50,
+      width: 200,
+      color: ColorUtility.orange,
+      borderColor: ColorUtility.transparent,
+      borderRadius: 15,
+      borderWidth: 0
   );
 }
 
@@ -52,6 +62,8 @@ class AppComponentSizes {
   static double completeShoppingBoxWidth = 160;
   static double completeShoppingBoxBorderWidth = 2;
   static double completeShoppingBoxBorderRadius = 12;
+  static double smallSpaceHeight = 10;
+  static double bigSpaceHeight = 75;
 }
 
 class IconUtiliity {
@@ -59,13 +71,22 @@ class IconUtiliity {
   static Icon removingIcon = const Icon(Icons.remove);
   static Icon deletingIcon = Icon(Icons.delete, color: ColorUtility.orange);
   static Icon arrowBack = const Icon(Icons.arrow_back);
-  static Icon shoppinCartIcon = const Icon(Icons.shopping_cart);
+  static Icon shoppingCartIcon = const Icon(Icons.shopping_cart);
+  static Icon logoutIcon = const Icon(Icons.logout);
 }
 
-ClipRRect customImage(String asset) {
+Text myTextWidget(data, Color fontColor, double fontSize) => Text(
+      data,
+      style: TextStyle(color: fontColor, fontSize: fontSize),
+    );
+
+ClipRRect customImage(String asset, double height, double width) {
   return ClipRRect(
       borderRadius: BorderRadius.circular(30),
-      child: SizedBox(height: 110, child: Image(image: AssetImage(asset))));
+      child: SizedBox(
+          height: height,
+          width: width,
+          child: Image(image: AssetImage(asset))));
 }
 
 Row informationRow(Widget productImage, Widget productInformationRow) {
@@ -87,3 +108,19 @@ Container bigInformationBox(Widget informationRow) {
     child: informationRow,
   );
 }
+
+CustomTextfield loginTextField(String data, Rx<TextEditingController> controller) {
+  return CustomTextfield(
+    hintText: data == 'Name' ? data : 'Password',
+    datacontroller: controller.value,
+    icon: Icon(
+      data == 'Name' ? Icons.account_circle : Icons.lock,
+      color: ColorUtility.orange,
+    ),
+    obsecureText: data == 'Password' ? true : false,
+  );
+}
+
+SizedBox space(double height) => SizedBox(
+      height: height,
+    );
